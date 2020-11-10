@@ -1,0 +1,44 @@
+
+create table klienci (
+Identyfikator primary key,
+Imię varchar(30),
+Nazwisko varchar(30) not null,
+Nr_Telefonu integer,
+data,
+Email varchar(45),
+Login varchar(50),
+Haslo varchar(30)
+CONSTRAINT gogo FOREIGN KEY (Identyfikator) REFERENCES ZapisKlienta
+);
+
+create table zapisKlienta (
+Identyfikator primary key,
+idKlienta varchar(30),
+Tatuartorzy varchar(30) not null,
+data,
+RodzajUslugi
+);
+
+create table Seans (
+Identyfikator primary key,
+Tatuaż varchar(30)
+CONSTRAINT gogo FOREIGN KEY (RodzajUslugi) REFERENCES ZapisKlienta
+);
+
+create table Tatuatorzy(
+Identyfikator primary key,
+Imię varchar(30),
+Nazwisko varchar(30) not null,
+Nr_Telefonu integer,
+Login varchar(50),
+Haslo varchar(30)
+RodzajUslugi varchar(30)
+CONSTRAINT gogo FOREIGN KEY (Tatuartorzy) REFERENCES ZapisKlienta
+);
+
+create table Uslugi(
+Identyfikator primary key,
+Tatuartorzy varchar(30) not null,
+Tatuaż varchar(30)
+CONSTRAINT gogo FOREIGN KEY (RodzajUslugi) REFERENCES Tatuartorzy  
+);

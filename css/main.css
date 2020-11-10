@@ -1,0 +1,914 @@
+/*-------Specification--------*/
+
+
+body {
+
+	font-family: 'Open Sans', sans-serif;
+
+	padding: 0;
+
+	margin: 0;
+
+	color: #80858b;
+
+	font-size: 14px;
+
+	font-weight: 400;
+
+	letter-spacing: 0;
+	
+	background: #e6e6e6; 
+
+}
+
+
+
+div, p, form, input, a, span, button,i {
+
+	box-sizing: border-box;
+
+}
+
+
+
+p {
+
+	margin: 0;
+
+}
+
+
+
+ul, li {
+
+	display: block;
+
+	padding: 0;
+
+	margin: 0;
+
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+
+	padding: 0;
+
+	margin: 0;
+
+	text-transform: uppercase;
+
+	font-weight: 700;
+
+}
+
+
+
+a, a:hover, a:active {
+
+	text-decoration: none;
+
+	color: #fff;
+
+}
+
+
+
+a, button, input {
+
+	transition: all 0.3s ease;
+
+}
+
+
+
+input, input:hover, input:focus, input:active,
+
+button, button:hover, button:focus, button:active
+
+	{
+
+		outline: none;
+
+}
+
+
+
+.container-fluid_plain {
+
+	padding: 0;
+
+}
+
+
+
+.btn {
+
+	display: block;
+
+	width: 200px;
+
+	height: 46px;
+
+	background: #e84545;
+
+	color: #fff;
+
+	font-size: 13px;
+
+	font-weight: 700;
+
+	text-transform: uppercase;
+
+	border-radius: 2px;
+
+	line-height: 2.5em;
+
+}
+
+
+
+/*-------First screen--------*/
+
+.header {
+
+	background: url(../img/mainbg.png) no-repeat center top / cover;
+
+	padding-top: 27px;
+
+	padding-bottom: 243px;
+
+}
+
+
+
+.logo {
+
+	font-size: 30px;
+
+	font-weight: 700;
+
+	color: #626fe4;
+
+	text-transform: uppercase;
+
+}
+
+
+
+.logo span {
+
+	font-weight: 400;
+
+	color: #fff;
+
+}
+
+
+
+.menu {
+
+	padding-top: 14px;
+
+}
+
+
+
+.menu__item {
+
+	color:#fff;
+
+	text-transform: uppercase;
+
+	font-size: 14px;
+
+	position: relative;
+
+}
+
+
+
+.menu__item:after {
+
+	position: absolute;
+
+	content: '';
+
+	width: 200%;
+
+	top:56px;
+
+	left: -50%;
+
+	height: 3px;
+
+	background: rgba(256,256,256,.5);
+
+	opacity: 0;
+
+	transition: opacity .3s;
+
+}
+
+
+
+.menu__item:hover::after {
+
+	opacity: 1;
+
+}
+
+
+
+.own-line {
+
+	border-bottom: 1px solid #52535c;
+
+	padding-bottom: 28px;
+
+}
+
+
+
+.main {
+
+	padding-top: 180px;
+
+}
+
+
+
+.main__title {
+
+	font-size: 45px;
+
+	color: rgb(187, 7, 42);
+
+	text-align: center;
+
+	padding-bottom: 32px;
+
+}
+
+
+
+.main__text {
+
+	width: 552px;
+
+	text-align: center;
+
+	font-size: 22px;
+
+	color: #fff;
+
+	margin: 0 auto;
+
+	padding-bottom: 28px;
+
+}
+
+
+
+.main__btn {
+
+	margin: 0 auto;
+
+}
+
+
+
+.main__btn:hover {
+
+	background: transparent;
+
+	border: 1px solid #e84545;
+
+}
+
+
+
+/*-------Second screen--------*/
+/* 
+Slideshow container */
+
+.slideshow-container {
+  
+	max-width: 1000px;
+  
+	position: relative;
+  
+	margin: auto;
+
+}
+
+
+
+/* Hide the images by default */
+
+.mySlides {
+  
+	display: none;
+
+}
+
+
+
+/* Next & previous buttons */
+
+.prev, .next {
+ 
+ 	cursor: pointer;
+  
+	position: absolute;
+ 
+ 	top: 50%;
+ 
+ 	width: auto;
+ 
+ 	margin-top: -22px;
+
+  	padding: 16px;
+ 
+ 	color: white;
+ 
+ 	font-weight: bold;
+ 
+ 	font-size: 18px;
+ 
+ 	transition: 0.6s ease;
+  
+	border-radius: 0 3px 3px 0;
+ 
+ 	user-select: none;
+
+}
+
+
+
+/* Position the "next button" to the right */
+
+.next {
+  
+	right: 0;
+  
+	border-radius: 3px 0 0 3px;
+
+}
+
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover, .next:hover {
+
+  	background-color: rgba(0,0,0,0.8);
+
+}
+
+
+
+/* Caption text */
+
+.text {
+  
+	color: #f2f2f2;
+  
+	font-size: 15px;
+  
+	padding: 8px 12px;
+ 
+	position: absolute;
+  
+	bottom: 8px;
+  
+	width: 100%;
+  
+	text-align: center;
+
+}
+
+/
+* Number text (1/3 etc) */
+
+.numbertext {
+ 
+	color: #f2f2f2;
+ 
+	font-size: 12px;
+ 
+	padding: 8px 12px;
+ 
+	position: absolute;
+  
+	top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+  
+	cursor: pointer;
+  
+	height: 15px;
+  
+	width: 15px;
+  
+	margin: 0 2px;
+  
+	background-color: #bbb;
+  
+	border-radius: 50%;
+  
+	display: inline-block;
+  
+	transition: background-color 0.6s ease;
+
+}
+
+
+.active, .dot:hover {
+  
+background-color: #717171;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+  
+	-webkit-animation-name: fade;
+ 
+	-webkit-animation-duration: 1.5s;
+  
+	animation-name: fade;
+  
+	animation-duration: 1.5s;
+
+}
+
+
+@-webkit-keyframes fade {
+  
+from {opacity: .4
+} 
+ 
+to {
+opacity: 1
+}
+
+}
+
+
+@keyframes fade {
+  
+	from {opacity: .4
+	} 
+  
+	to {opacity: 1}
+
+}
+.features {
+	
+	text-align: center;
+	padding-top: 121px;
+	
+
+}
+
+
+.feature__title {
+
+	font-size: 100px;
+
+	color: #2d3033;
+
+	padding-bottom: 18px;
+
+}
+
+
+
+.feature__text {
+
+	padding-bottom: 72px;
+
+}
+
+
+
+/*-------Third screen--------*/
+
+
+
+.works {
+
+	padding-top: 51px;
+
+	padding-bottom: 103px;
+
+}
+
+
+
+.work {
+
+	margin-bottom: 26px;
+
+	position: relative;
+
+}
+
+
+
+.work__overlay {
+
+	background: rgba(232,69,69,.9);
+
+	opacity: 0;
+
+	position: absolute;
+
+	top: 0;
+
+	left: 0;
+
+	width: 100%;
+
+	height: 100%;
+
+	transition: .3s ease;
+
+	display: -webkit-flex;
+
+	display: -moz-flex;
+
+	display: -ms-flex;
+
+	display: -o-flex;
+
+	display: flex;
+
+	justify-content: center;
+
+	-ms-align-items: center;
+
+	align-items: center;
+
+}
+
+
+
+.work__text {
+
+	color: #fff;
+
+	text-align: center;
+
+}
+
+
+
+.work img {
+
+	width: 100%;
+
+}
+
+
+
+.work__name {
+
+	font-weight: 700;
+
+	text-transform: uppercase;
+
+}
+
+
+
+.work:hover .work__overlay{
+
+	opacity: 1;
+
+}
+
+
+
+/*-------Fourth screen--------*/
+
+
+
+.team {
+
+	padding-top: 128px;
+
+	padding-bottom: 118px;
+
+	background: #f1f2fd;
+
+}
+
+
+
+.worker__name {
+
+	font-size: 22px;
+
+	font-weight: 700;
+
+	color: #2d3033;
+
+	padding-top: 22px;
+
+}
+
+
+
+.worker__place {
+
+	font-size: 13px;
+
+	color: #e84545;
+
+	text-transform: uppercase;
+
+	padding-top: 3px;
+
+}
+
+
+
+.worker__text {
+
+	width: 270px;
+
+	padding-top: 20px;
+
+}
+
+
+
+.worker__social {
+
+	padding-top: 25px;
+
+}
+
+.offer__title {
+	text-align: center;
+	padding-top: 30px;
+
+}
+
+.offer__text {
+	padding-top: 15px;
+	text-align: center;
+	font-size: 18px;
+}
+.offer_texxxt{
+	text-align: center;
+	font-size: 70px;
+	color: black;
+	padding-bottom: 18px;
+
+
+}
+/*-------Slider--------*/
+
+.your__class {
+	margin: 0 auto;
+	padding: 40px 0 70px;
+}
+
+
+
+
+
+/*-------Media Quaries--------*/
+
+
+
+/* 992-1200px */
+
+@media screen and (max-width: 1200px) {
+
+	.work {
+
+		text-align: center;
+
+	}	
+
+
+
+	.worker {
+
+		text-align: center;
+
+		margin-bottom: 20px;
+
+	}
+
+
+
+	.worker__text {
+
+		margin: 0 auto;
+
+	}
+
+	
+
+	.feedback {
+
+		padding: 140px 10px 120px 30px;
+
+	}
+
+
+
+	.feedback__text {
+
+		font-size: 32px;
+
+	}	
+
+}
+
+
+
+/* 768-992px */
+
+@media screen and (max-width: 992px) {
+
+	.feedback__text {
+
+		font-size: 24px;
+
+	}	
+
+
+
+	.footer {
+
+		padding-bottom: 45px;
+
+	}
+
+
+
+	.location {
+
+		margin-bottom: 40px;
+
+	}
+
+
+
+	.client {
+
+		height: 450px;
+
+	}
+
+}
+
+
+
+/* 576-768px */
+
+@media screen and (max-width: 768px) {
+
+	.logo {
+
+		font-size: 24px;
+
+	}
+
+
+
+	.menu {
+
+		flex-direction: column;
+
+		text-align: center;
+
+	}
+
+
+
+	.menu__item {
+
+		padding-bottom: 20px;
+
+	}
+
+
+
+	.menu__item:after {
+
+		top:20px;
+
+		width: 20%;
+
+		left: 40%;
+
+	}
+
+
+
+	.feature__text {
+
+		width: 100%;
+
+	}
+
+
+
+	.main__title {
+
+		font-size: 36px;
+
+	}
+
+
+
+	.main__text {
+
+		width: 100%;
+
+		font-size: 18px;
+
+	}
+
+
+
+	.feature__text {
+
+		margin: 0 auto ;
+
+	}
+
+
+
+	.work  {
+
+		width: 270px;
+
+		margin : 0 auto 26px;
+
+	}
+
+
+
+	.worker__text {
+
+		width: 100%;
+
+	}
+
+}
+
+
+
+/* 320-576px */
+
+@media screen and (max-width: 576px) {
+
+	.menu {
+
+		padding-top: 20px;
+
+	}
+
+
+
+	.main__title {
+
+    font-size: 26px;
+
+	}
+
+	
+
+	.main__text {
+
+		font-size: 14px;
+
+	}
+
+	
+
+	.feature__text {
+
+		width: 100%;
+
+	}
+
+}
